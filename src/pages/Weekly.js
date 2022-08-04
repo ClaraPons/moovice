@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import moment from 'moment'
+import "./Popular.css"
 
 const Weekly = () => {
 

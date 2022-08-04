@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import "./Popular.css"
+import "./Favorites.css"
 
 const Favorites = () => {
 
@@ -42,16 +44,19 @@ const Favorites = () => {
     return (
         <>
         <h1>Favorites</h1>
+        <div className="box-fav">
         {movies.map(movie => {
             return(
-                <div key={movie.title}>
-                    <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt=""></img>
-                    <h2>{movie.title}</h2>
+               
+                <div className='card-fav' key={movie.title}>
+                    <img className='affiche' src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt=""></img>
+                    <h2 className='title-movie'>{movie.title}</h2>
                     <p>{movie.release_date}</p>
-                    <p>{movie.overview}</p>
+                    <p className='description'>{movie.overview}</p>
                 </div>
             )
         })}
+        </div>
         </>
 
     )

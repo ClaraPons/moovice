@@ -12,7 +12,7 @@ body{
     padding: 0px 40px 40px 40px;
     display: grid;
     grid-template-columns: repeat(4, 2fr);
-    gap: 30px;
+    gap: 80px;
 }
 
 
@@ -23,18 +23,22 @@ body{
     backdrop-filter: blur(100px);
     background-color:rgba(255,255,255, .3);
     border-radius: 10px;
-    padding: 10px 1px;  
+    padding: 30px 0px;  
+    justify-content: space-between;
+}
+
+.card-bis{
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px;
+    align-items:  center;
+    text-align: justify;
 }
 
 .affiche{
     width: 180px;
-}
-
-.infos{
-    display: flex;
-    flex-direction: column;
-    padding: 0px 20px;
-    font-size: 12px;
+    border-radius: 10px;
 }
 
 .button-popular{
@@ -42,6 +46,14 @@ body{
    border: 1px solid rgba(7,3,53,1);
    background-color: rgba(7,3,53,1);
    color: white;
+   align-self: center;
+   padding: 10px 20px;
+   border-radius: 10px;
+   cursor: pointer;
 }
 
+.title-movie{
+    text-align: center;
+    font-size: 18px;
+}
 
