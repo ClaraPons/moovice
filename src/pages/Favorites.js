@@ -21,17 +21,20 @@ const Favorites = () => {
         const FavoritesMoviesParse = JSON.parse(FavoritesMoviesid)
         // console.log(FavoritesMoviesParse)
 
-        const promises = FavoritesMoviesParse.map(id => {
-            return fetchMovies(id)
-        })
-        // console.log(promises)
-
-        const promiseAllResult = await Promise.all(promises)
-        // console.log(promiseAllResult)
-
-
-        setMovies(promiseAllResult)
-        
+        if(FavoritesMoviesParse){
+            const promises = FavoritesMoviesParse.map(id => {
+                return fetchMovies(id)
+            })
+            // console.log(promises)
+    
+            const promiseAllResult = await Promise.all(promises)
+            // console.log(promiseAllResult)
+    
+    
+            setMovies(promiseAllResult)
+            
+        }
+       
     }
     
     console.log(movies)

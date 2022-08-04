@@ -40,8 +40,8 @@ const Popular = () => {
     return(
         <div>
             <h1 className='title-popular'>Popular</h1>
+            <div className='box'>
             {popular.map(movie => (
-                <div className='box'>
                  <Cards 
                     key={movie.title} 
                     image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
@@ -51,8 +51,9 @@ const Popular = () => {
                     handleClickFavorites={() => handleClickFavorites(movie.id)
                     }
                 />
-                 </div>
+                
             ))}
+             </div>
         </div>
     )
 }
