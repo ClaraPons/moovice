@@ -1,0 +1,42 @@
+body{
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+    color: white;
+}
+
+.title-popular{
+    font-size: 50px;
+    text-align: center;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 40px 40px 40px;
+}
+
+
+.card{
+    display: flex; 
+    backdrop-filter: blur(100px);
+    background-color:rgba(255,255,255, .3);
+    border-radius: 10px;
+    padding: 10px;  
+}
+
+.affiche{
+    width: 200px;
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 0px 50px;
+}
+
+.button-popular{
+    display: ;
+}
+
+

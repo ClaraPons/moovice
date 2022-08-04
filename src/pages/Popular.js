@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Cards from '../components/Cards'
+import "./Popular.css"
 
 const Popular = () => {
 
@@ -37,20 +38,22 @@ const Popular = () => {
     }
 
     return(
-        <>
-            <h1>Popular</h1>
+        <div>
+            <h1 className='title-popular'>Popular</h1>
             {popular.map(movie => (
+                <div className='box'>
                  <Cards 
                     key={movie.title} 
-                    title={movie.title} 
-                    image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} 
+                    image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+                    title={movie.title}  
                     date={movie.release_date} 
                     description={movie.overview} 
                     handleClickFavorites={() => handleClickFavorites(movie.id)
                     }
                 />
+                 </div>
             ))}
-        </>
+        </div>
     )
 }
 
