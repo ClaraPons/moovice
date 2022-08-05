@@ -43,16 +43,15 @@ const Favorites = () => {
 
     return (
         <>
-        <h1>Favorites</h1>
+        <h1 className='title-popular'>Favorites</h1>
         <div className="box-fav">
         {movies.map(movie => {
             return(
-               
                 <div className='card-fav' key={movie.title}>
                     <img className='affiche' src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt=""></img>
                     <h2 className='title-movie'>{movie.title}</h2>
-                    <p>{movie.release_date}</p>
-                    <p className='description'>{movie.overview}</p>
+                    <p>Release date: {movie.release_date}</p>
+                    {/* <p className='description'>{movie.overview}</p> */}
                 </div>
             )
         })}

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import moment from 'moment'
 import "./Popular.css"
+import "./Weekly.css"
+import Cards from "../components/Cards"
 
 const Weekly = () => {
 
@@ -24,17 +26,19 @@ const Weekly = () => {
 
     return (
         <>
-            <h1>Weekly</h1>
+            <h1 className="title-popular">Weekly</h1>
+            <div className="box-weekly">
             {weekly.map(movie => {
                   return(
-                    <div key={movie.title}>
-                        <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt=""></img>
-                        <h2>{movie.title}</h2>
+                    <div className='card-weekly' key={movie.title}>
+                        <img className='affiche'  src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt=""></img>
+                        <h2 className='title-movie'>{movie.title}</h2>
                         <p>Release date: {movie.release_date}</p>
                         <p>Description: {movie.overview}</p>
                     </div>
                 )
             })}
+            </div>
         </>
     )
 }

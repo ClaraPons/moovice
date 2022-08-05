@@ -11,8 +11,9 @@ body{
 .box{
     padding: 0px 40px 40px 40px;
     display: grid;
-    grid-template-columns: repeat(4, 2fr);
+    grid-template-columns: repeat(4, 2fr); 
     gap: 80px;
+
 }
 
 
