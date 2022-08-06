@@ -17,3 +17,28 @@
     justify-content: flex-start;
     text-align: justify;
 }
+
+@media (max-width:1250px) {
+
+    .box-weekly{
+        grid-template-columns: repeat(3, 2fr);     
+    }
+
+}
+
+
+@media (max-width:1000px) {
+
+    .box-weekly{
+        grid-template-columns: repeat(2, 2fr);     
+    }
+
+}
+
+@media (max-width:700px) {
+
+    .box-weekly{
+        grid-template-columns: repeat(1, 2fr);     
+    }
+
+}
