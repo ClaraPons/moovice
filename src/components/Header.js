@@ -1,14 +1,14 @@
-import {Link} from "react-router-dom"
-
+import {NavLink} from "react-router-dom"
+import "./Header.css"
 
 const Header = () =>{
     return(
-        <header>
+        <header className="header">
+            <NavLink className="link-home" to={"/"}><h1 className="title-Header">Moovice</h1></NavLink>
             <nav>
-                <Link to={"/"}>Home</Link>
-                <Link to={"/weekly"}>Weekly</Link>
-                <Link to={"/popular"}>Popular</Link>
-                <Link to={"/favorites"}>Favorites</Link>
+                <NavLink className="link" to={"/weekly"}>Weekly</NavLink>
+                <NavLink className="link" to={"/popular"}>Popular</NavLink>
+                <NavLink className="link" to={"/favorites"}>Favorites</NavLink>
             </nav>
         </header>
     )

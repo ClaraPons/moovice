@@ -39,7 +39,7 @@ const Popular = () => {
 
     return(
         <div>
-            <h1 className='title-popular'>Popular</h1>
+            {/* <h1 className='title-popular'>Popular</h1> */}
             <div className='box'>
             {popular.map(movie => (
                  <Cards 

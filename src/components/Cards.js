@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Cards = (props) => {
 
 
@@ -8,11 +9,13 @@ const Cards = (props) => {
         <div className='card'>
             <div className='card-bis'>
                 <img className='affiche' src={props.image} alt=""/>
-                <h2 className='title-movie'>{props.title}</h2>
-                <p><strong>Release date :</strong> {props.date}</p>
-                <p className='description'><strong>Description :</strong> {props.description}</p>
+                <div className="text-popular">
+                    <h2 className='title-movie'>{props.title}</h2>
+                    <p><strong>Release date :</strong> {props.date}</p>
+                    <p className='description'><strong>Description :</strong> {props.description}</p>
+                    <button className='button-popular' onClick={props.handleClickFavorites}>Add to favorites</button>
+                </div>
             </div>
-            <button className='button-popular' onClick={props.handleClickFavorites}>Add to favorites</button>
         </div>
     )
 }

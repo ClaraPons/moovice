@@ -1,8 +1,8 @@
 .box-weekly{
-    padding: 0px 40px 40px 40px;
+    padding: 50px 40px 40px 40px;
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 90px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
     justify-items: center;
 }
 
@@ -13,9 +13,45 @@
     backdrop-filter: blur(100px);
     background-color:rgba(255,255,255, .3);
     border-radius: 10px;
-    padding: 30px 30px;  
-    justify-content: flex-start;
+    padding: 10px;  
     text-align: justify;
+}
+
+.card-weekly:hover img{
+    filter: brightness(40%) blur(50px);
+}
+
+.card-weekly:hover p{
+    color: white;
+}
+
+.card-weekly:hover h2{
+    color: white;
+}
+
+.release{
+    font-size: 15px;
+}
+
+.text {
+    position: absolute;
+    padding: 0px 34px;
+    display: flex;
+    flex-direction: column;
+    color:rgba(255, 255, 255, 0);
+    text-align: justify;
+}
+
+.text h2{
+    font-size: 25px;
+}
+
+.description{
+    font-size: 15px;
+}
+
+.release{
+    text-align: center;
 }
 
 @media (max-width:1250px) {

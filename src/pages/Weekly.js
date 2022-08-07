@@ -26,16 +26,18 @@ const Weekly = () => {
 
     return (
         <>
-            <h1 className="title-popular">Weekly</h1>
+            {/* <h1 className="title-popular">Weekly</h1> */}
             <div className="box-weekly">
             {weekly.map(movie => {
                   return(
                     <div className='card-weekly' key={movie.title}>
-                        <img className='affiche'  src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt=""></img>
-                        <h2 className='title-movie'>{movie.title}</h2>
-                        <p>Release date: {movie.release_date}</p>
-                        <p>Description: {movie.overview}</p>
-                    </div>
+                            <img className='affiche' src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt=""></img>
+                            <div className="text">
+                                <h2 className='title-movie'>{movie.title}</h2>
+                                <p className="release">Release date: {movie.release_date}</p>
+                                <p className="description">Description: {movie.overview}</p>
+                            </div>
+                        </div>
                 )
             })}
             </div>

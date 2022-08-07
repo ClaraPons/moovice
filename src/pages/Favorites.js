@@ -43,7 +43,7 @@ const Favorites = () => {
 
     return (
         <>
-        <h1 className='title-popular'>Favorites</h1>
+        {/* <h1 className='title-popular'>Favorites</h1> */}
         <div className="box-fav">
         {movies.map(movie => {
             return(
