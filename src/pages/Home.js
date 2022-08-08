@@ -4,7 +4,7 @@ import "./Home.css"
 
 const Home = () => {
 
-    const [latest, setLatest] = useState([])
+    const [latest, setLatest] = useState(null)
     const [topRated, settopRated] = useState([])
     const [nowPlaying, setNowPlaying] = useState([])
     const [upComing, setUpComing] = useState([])
@@ -75,8 +75,9 @@ const Home = () => {
     //     fetchUpComing()
     // },[UpcomingSplice])
 
-
-
+    if(latest === null){
+        return <div></div>
+      }
     return(
         <>
             {/* <h1 className="home">Home</h1> */}
