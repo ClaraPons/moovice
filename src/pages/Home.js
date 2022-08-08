@@ -18,6 +18,7 @@ const Home = () => {
         fetchTopRated()
         fetchNowPlaying()
         fetchUpComing()
+        // eslint-disable-next-line
     }, [])
 
 

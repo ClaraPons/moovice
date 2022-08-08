@@ -8,6 +8,7 @@ const Popular = () => {
 
     useEffect(() => {
         fetchPopularMovies()
+        // eslint-disable-next-line
     }, [])
 
     const fetchPopularMovies = async () => {

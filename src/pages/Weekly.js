@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import moment from 'moment'
 import "./Popular.css"
 import "./Weekly.css"
-import Cards from "../components/Cards"
 
 const Weekly = () => {
 
