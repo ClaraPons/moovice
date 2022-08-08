@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import moment from 'moment'
 import "./Popular.css"
 import "./Weekly.css"
+import Cards from "../components/Cards"
 
 const Weekly = () => {
 
@@ -29,14 +30,14 @@ const Weekly = () => {
             <div className="box-weekly">
             {weekly.map(movie => {
                   return(
-                    <div className='card-weekly' key={movie.title}>
-                            <img className='affiche' src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt=""></img>
-                            <div className="text">
-                                <h2 className='title-movie'>{movie.title}</h2>
-                                <p className="release">Release date: {movie.release_date}</p>
-                                <p className="description">Description: {movie.overview}</p>
-                            </div>
-                        </div>
+                    <Cards 
+                    key={movie.title} 
+                    image={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+                    title={movie.title}  
+                    date={movie.release_date} 
+                    description={movie.overview} 
+                    // handleClickFavorites={() => handleClickFavorites(movie.id)}
+                />
                 )
             })}
             </div>
